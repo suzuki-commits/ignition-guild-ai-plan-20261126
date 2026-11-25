@@ -902,6 +902,52 @@
         font-size: 17px;
         color: var(--ink-soft);
       }
+      .price {
+        margin-top: 18px;
+        background: var(--paper);
+        border-radius: 12px;
+        padding: 16px 20px;
+        display: grid;
+        gap: 12px;
+      }
+      .price-row {
+        display: grid;
+        grid-template-columns: 6.4em auto 1fr;
+        align-items: baseline;
+        gap: 2px 14px;
+      }
+      .solo {
+        grid-template-columns: auto auto 1fr;
+      }
+      .pl {
+        font-size: 17px;
+        font-weight: 900;
+        color: var(--flame);
+      }
+      .pv {
+        font-family: var(--num);
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+      .pv i {
+        font-family: var(--jp);
+        font-style: normal;
+        font-size: 0.4em;
+        font-weight: 900;
+        margin: 0 3px;
+      }
+      .pn {
+        font-size: 17px;
+        line-height: 1.5;
+        color: var(--ink-soft);
+      }
+      @media (max-width: 720px) {
+        .price-row {
+          grid-template-columns: 1fr;
+        }
+      }
       .svc ul {
         margin-top: 16px;
         display: grid;
@@ -1635,6 +1681,13 @@
               <p>
                 経営者限定のマンツーマン。合原様の実務に合わせて、道具選びから実践、効果の確認まで伴走します。
               </p>
+              <div class="price">
+                <div class="price-row solo">
+                  <span class="pl">年額</span>
+                  <span class="pv">240<i>万円</i></span>
+                  <span class="pn">税別・経営者1名・月あたり20万円</span>
+                </div>
+              </div>
               <ul>
                 <li>月2回・各30分のZoom個別相談</li>
                 <li>CEO鈴木は月1回、CIO橋本は月2回参加</li>
@@ -1652,6 +1705,18 @@
               <p>
                 対象業務を選び、その場で試し、一緒に実装して、運用を直していきます。6か月の支援です。
               </p>
+              <div class="price">
+                <div class="price-row">
+                  <span class="pl">ベーシック</span>
+                  <span class="pv"><i>月額</i>20<i>万円</i></span>
+                  <span class="pn">税別・6か月で120万円</span>
+                </div>
+                <div class="price-row">
+                  <span class="pl">スタンダード</span>
+                  <span class="pv"><i>月額</i>50<i>万円</i></span>
+                  <span class="pn">税別・6か月で300万円</span>
+                </div>
+              </div>
               <ul>
                 <li>ご参加は4名まで、コミクスの稼働は月10時間まで</li>
                 <li>
@@ -1724,7 +1789,9 @@
           <li>
             試算・目安・想定メニューは仮定にもとづくもので、売上・採用・単価などの成果を保証するものではありません。
           </li>
-          <li>料金と契約条件は、明日のミーティングでご案内します。</li>
+          <li>
+            料金は税別で、2026年11月時点の当社メニューによります。契約条件の詳細は、明日のミーティングでご案内します。
+          </li>
         </ul>
       </div>
     </footer>
