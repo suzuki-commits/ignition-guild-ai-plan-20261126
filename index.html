@@ -1,0 +1,2139 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>
+      イグニッション・ギルド様 生成AI活用 19の施策｜株式会社コミクス
+    </title>
+    <meta
+      name="description"
+      content="株式会社イグニッション・ギルド 合原 英亮 様へ。生成AIで売上と生産性を動かす19の施策と、貴社の数字で動かせる試算。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f4f7fc;
+        --white: #ffffff;
+        --ink: #0a1222;
+        --ink-soft: #2b3850;
+        --flame: #1038d4;
+        --flame-deep: #0a2191;
+        --core: #18b6f2;
+        --mist: #dde8fa;
+        --line: #bccbe6;
+        --jp:
+          "Zen Kaku Gothic New", "Noto Sans JP", "Hiragino Sans", "Yu Gothic",
+          sans-serif;
+        --num: "Barlow Condensed", "Zen Kaku Gothic New", sans-serif;
+        --mono: "IBM Plex Mono", "Zen Kaku Gothic New", monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--jp);
+        font-size: 18px;
+        line-height: 1.85;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      p,
+      dl,
+      dd,
+      ul,
+      ol {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--core);
+        outline-offset: 3px;
+      }
+      .wrap {
+        width: min(1160px, 100% - 48px);
+        margin-inline: auto;
+      }
+
+      /* ---------- top bar ---------- */
+      .bar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(244, 247, 252, 0.94);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      .bar .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 60px;
+      }
+      .bar-id {
+        font-family: var(--mono);
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+      }
+      .bar-id b {
+        color: var(--flame);
+        font-weight: 600;
+      }
+      .bar nav {
+        display: flex;
+        gap: 6px;
+      }
+      .bar nav a {
+        font-size: 17px;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 6px 14px;
+        border-radius: 999px;
+      }
+      .bar nav a:hover {
+        background: var(--mist);
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        padding: 72px 0 84px;
+      }
+      .eyebrow {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--flame);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        align-items: baseline;
+      }
+      .nb {
+        display: inline-block;
+      }
+      .eyebrow b {
+        font-weight: 700;
+      }
+      .eyebrow span {
+        color: var(--ink-soft);
+        font-weight: 500;
+        font-size: 17px;
+      }
+      .hero h1 {
+        margin-top: 22px;
+        font-size: clamp(38px, 6.1vw, 84px);
+        line-height: 1.18;
+        font-weight: 900;
+        letter-spacing: -0.01em;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--flame);
+      }
+      .lead {
+        margin-top: 28px;
+        max-width: 46em;
+        font-size: 20px;
+        line-height: 1.9;
+        color: var(--ink-soft);
+      }
+      .lead q {
+        quotes: "「" "」";
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .eq-label {
+        margin-top: 56px;
+        font-family: var(--mono);
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: var(--ink-soft);
+      }
+      .eq {
+        margin-top: 14px;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 8px;
+      }
+      .eq-lhs,
+      .op {
+        display: flex;
+        align-items: center;
+        font-family: var(--mono);
+        font-weight: 500;
+      }
+      .eq-lhs {
+        font-family: var(--jp);
+        font-weight: 900;
+        font-size: 30px;
+        white-space: nowrap;
+        padding-right: 4px;
+      }
+      .eq-lhs i {
+        font-family: var(--mono);
+        font-style: normal;
+        font-weight: 500;
+        margin-left: 12px;
+        color: var(--flame);
+      }
+      .op {
+        font-size: 24px;
+        color: var(--flame);
+        white-space: nowrap;
+      }
+      .term {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        flex: 1 1 0;
+        min-width: 0;
+        border: 2px solid var(--flame);
+        border-radius: 14px;
+        background: var(--white);
+        padding: 16px 14px 14px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        transition: transform 0.18s ease;
+      }
+      .term::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(
+          0deg,
+          #1b6fea 0%,
+          var(--flame) 38%,
+          var(--flame-deep) 100%
+        );
+        transform: scaleY(0);
+        transform-origin: bottom;
+        animation: ignite 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+      .term::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 5px;
+        z-index: -1;
+        background: var(--core);
+        opacity: 0;
+        animation: glow 0.5s ease forwards;
+      }
+      .term:nth-of-type(1)::before {
+        animation-delay: 0.35s;
+      }
+      .term:nth-of-type(1)::after {
+        animation-delay: 0.75s;
+      }
+      .term:nth-of-type(2)::before {
+        animation-delay: 0.6s;
+      }
+      .term:nth-of-type(2)::after {
+        animation-delay: 1s;
+      }
+      .term:nth-of-type(3)::before {
+        animation-delay: 0.85s;
+      }
+      .term:nth-of-type(3)::after {
+        animation-delay: 1.25s;
+      }
+      .term:nth-of-type(5)::before {
+        animation-delay: 1.1s;
+      }
+      .term:nth-of-type(5)::after {
+        animation-delay: 1.5s;
+      }
+      @keyframes ignite {
+        to {
+          transform: scaleY(1);
+        }
+      }
+      @keyframes glow {
+        to {
+          opacity: 1;
+        }
+      }
+      .term b {
+        white-space: nowrap;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.3;
+        color: var(--white);
+        animation: inkin 0.7s both;
+      }
+      .term small {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--white);
+        animation: inkin 0.7s both;
+      }
+      .term .cnt {
+        margin-top: 6px;
+        font-family: var(--num);
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: #bfe9ff;
+        animation: inkin2 0.7s both;
+      }
+      .term:nth-of-type(1) :is(b, small, .cnt) {
+        animation-delay: 0.35s;
+      }
+      .term:nth-of-type(2) :is(b, small, .cnt) {
+        animation-delay: 0.6s;
+      }
+      .term:nth-of-type(3) :is(b, small, .cnt) {
+        animation-delay: 0.85s;
+      }
+      .term:nth-of-type(5) :is(b, small, .cnt) {
+        animation-delay: 1.1s;
+      }
+      @keyframes inkin {
+        from {
+          color: var(--ink);
+        }
+        to {
+          color: var(--white);
+        }
+      }
+      @keyframes inkin2 {
+        from {
+          color: var(--flame);
+        }
+        to {
+          color: #bfe9ff;
+        }
+      }
+      .term:hover {
+        transform: translateY(-3px);
+      }
+      .term.keep {
+        border: 2px dashed var(--ink);
+        background: transparent;
+        cursor: default;
+      }
+      .term.keep::before,
+      .term.keep::after {
+        display: none;
+      }
+      .term.keep b,
+      .term.keep small {
+        color: var(--ink);
+        animation: none;
+      }
+      .term.keep .cnt {
+        color: var(--ink);
+        animation: none;
+      }
+      .term.keep:hover {
+        transform: none;
+      }
+      .eq-note {
+        margin-top: 16px;
+        font-size: 17px;
+        color: var(--ink-soft);
+      }
+
+      /* ---------- section basics ---------- */
+      .sec {
+        padding: 96px 0;
+      }
+      .sec-head p {
+        max-width: 44em;
+      }
+      h1,
+      h2,
+      h3,
+      dd,
+      .cap,
+      .hint,
+      .lead,
+      .field > span {
+        word-break: auto-phrase;
+      }
+      .kicker {
+        font-family: var(--mono);
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: var(--flame);
+      }
+      .sec h2 {
+        margin-top: 10px;
+        font-size: clamp(30px, 3.9vw, 50px);
+        line-height: 1.32;
+        font-weight: 900;
+        letter-spacing: -0.005em;
+        text-wrap: balance;
+      }
+      .sec-head p {
+        margin-top: 18px;
+        color: var(--ink-soft);
+      }
+
+      /* ---------- simulator ---------- */
+      .sim {
+        background: linear-gradient(
+          180deg,
+          var(--flame-deep) 0%,
+          var(--flame) 78%,
+          #1766e6 100%
+        );
+        color: var(--white);
+      }
+      .sim .kicker {
+        color: #9fdcff;
+      }
+      .sim .sec-head p {
+        color: #e4edff;
+      }
+      .sim-grid {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+        gap: 28px;
+        align-items: start;
+      }
+      .panel {
+        background: var(--white);
+        color: var(--ink);
+        border-radius: 18px;
+        padding: 28px;
+      }
+      .panel h3 {
+        font-size: 20px;
+        font-weight: 900;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 2px 12px;
+        white-space: nowrap;
+      }
+      .panel h3 span {
+        font-family: var(--mono);
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--flame);
+        letter-spacing: 0.04em;
+      }
+      .base {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        align-items: end;
+      }
+      .field {
+        display: block;
+      }
+      .field > span {
+        display: block;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+      .field .in {
+        margin-top: 6px;
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        border: 2px solid var(--line);
+        border-radius: 10px;
+        padding: 4px 12px;
+        background: var(--paper);
+      }
+      .field .in:focus-within {
+        border-color: var(--flame);
+      }
+      .field input[type="number"] {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        outline: 0;
+        font-family: var(--num);
+        font-size: 32px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .field .in em {
+        font-style: normal;
+        font-size: 17px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .levers {
+        margin-top: 30px;
+        padding-top: 26px;
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 20px;
+      }
+      .lever-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .lever-top label {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+      .lever-top label small {
+        display: block;
+        font-size: 17px;
+        font-weight: 500;
+        color: var(--ink-soft);
+      }
+      .lever-top output {
+        font-family: var(--num);
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--flame);
+        white-space: nowrap;
+      }
+      input[type="range"] {
+        width: 100%;
+        margin-top: 8px;
+        accent-color: var(--flame);
+        height: 28px;
+      }
+
+      .out {
+        display: grid;
+        gap: 18px;
+        position: sticky;
+        top: 84px;
+      }
+      .out-main {
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 18px;
+        padding: 28px 30px 30px;
+      }
+      .out-main .cap {
+        font-size: 19px;
+        font-weight: 700;
+      }
+      .big {
+        margin-top: 2px;
+        font-family: var(--num);
+        font-weight: 700;
+        font-size: clamp(64px, 9vw, 124px);
+        line-height: 1;
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0 8px;
+      }
+      .big .plus {
+        color: var(--core);
+      }
+      .big .unit {
+        font-family: var(--jp);
+        font-size: 0.28em;
+        font-weight: 900;
+      }
+      .out-main .sub {
+        margin-top: 12px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #e4edff;
+      }
+      .out-main .sub b {
+        font-family: var(--num);
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--white);
+        margin: 0 4px;
+      }
+      .bars {
+        margin-top: 22px;
+        display: grid;
+        gap: 10px;
+      }
+      .bar-row {
+        display: grid;
+        grid-template-columns: 7.2em 1fr 6.4em;
+        gap: 12px;
+        align-items: center;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .bar-row .track {
+        height: 16px;
+        border-radius: 99px;
+        background: rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+      }
+      .bar-row .fill {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: 99px;
+        background: var(--core);
+        transition: width 0.35s ease;
+      }
+      .bar-row .v {
+        font-family: var(--num);
+        font-size: 22px;
+        font-weight: 600;
+        text-align: right;
+        white-space: nowrap;
+      }
+      .out-three {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .mini {
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 16px;
+        padding: 18px 18px 20px;
+      }
+      .mini .cap {
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.5;
+        min-height: 3em;
+      }
+      .mini .val {
+        margin-top: 6px;
+        font-family: var(--num);
+        font-size: clamp(34px, 3.6vw, 48px);
+        font-weight: 700;
+        line-height: 1.1;
+        white-space: nowrap;
+      }
+      .mini .val i {
+        font-family: var(--jp);
+        font-style: normal;
+        font-size: 0.42em;
+        font-weight: 900;
+        margin-left: 2px;
+      }
+      .mini .hint {
+        margin-top: 6px;
+        font-size: 17px;
+        line-height: 1.6;
+        color: #e4edff;
+      }
+      .sim-notes {
+        margin-top: 30px;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #e4edff;
+      }
+      .sim-notes li {
+        padding-left: 1.2em;
+        text-indent: -1.2em;
+      }
+      .sim-notes li::before {
+        content: "※ ";
+      }
+
+      /* ---------- measures ---------- */
+      .filters {
+        margin-top: 36px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .filters button {
+        border: 2px solid var(--flame);
+        background: var(--white);
+        color: var(--flame);
+        font-size: 17px;
+        font-weight: 700;
+        padding: 8px 20px;
+        border-radius: 999px;
+      }
+      .filters button span {
+        font-family: var(--num);
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 8px;
+      }
+      .filters button[aria-pressed="true"] {
+        background: var(--flame);
+        color: var(--white);
+      }
+      .cards {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 26px 28px 28px;
+        display: flex;
+        flex-direction: column;
+      }
+      .card[hidden] {
+        display: none;
+      }
+      .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .tag {
+        font-size: 17px;
+        font-weight: 900;
+        color: var(--white);
+        background: var(--flame);
+        padding: 3px 12px;
+        border-radius: 6px;
+      }
+      .when {
+        font-family: var(--mono);
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--ink);
+        border: 1.5px solid var(--ink);
+        padding: 2px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .card h3 {
+        margin-top: 16px;
+        font-size: 23px;
+        line-height: 1.45;
+        font-weight: 900;
+      }
+      .card .do {
+        margin-top: 10px;
+        font-size: 17px;
+        line-height: 1.8;
+        color: var(--ink-soft);
+      }
+      .card dl {
+        margin-top: auto;
+        padding-top: 18px;
+        display: grid;
+        grid-template-columns: 6.6em 1fr;
+        gap: 8px 14px;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+      .card dl::before {
+        content: "";
+        grid-column: 1 / -1;
+        border-top: 1px solid var(--line);
+        margin-bottom: 8px;
+      }
+      .card dt {
+        font-weight: 900;
+        color: var(--flame);
+      }
+      .card dd {
+        color: var(--ink);
+      }
+      .cards-note {
+        margin-top: 22px;
+        font-size: 17px;
+        color: var(--ink-soft);
+      }
+
+      /* ---------- human ---------- */
+      .human {
+        background: var(--white);
+        border-block: 1px solid var(--line);
+      }
+      .human-grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 48px;
+      }
+      .human-item {
+        padding: 24px 0;
+        border-top: 2px dashed var(--ink);
+      }
+      .human-item h3 {
+        font-size: 23px;
+        font-weight: 900;
+        line-height: 1.45;
+      }
+      .human-item p {
+        margin-top: 8px;
+        font-size: 17px;
+        color: var(--ink-soft);
+      }
+      .human-item p b {
+        color: var(--flame);
+        font-weight: 900;
+      }
+
+      /* ---------- evidence ---------- */
+      .ev-grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .ev {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 26px 28px;
+      }
+      .ev.wide {
+        grid-column: span 2;
+      }
+      .ev .n {
+        font-family: var(--num);
+        font-size: clamp(56px, 6.4vw, 88px);
+        font-weight: 700;
+        line-height: 1;
+        color: var(--flame);
+        white-space: nowrap;
+      }
+      .ev .n i {
+        font-family: var(--jp);
+        font-style: normal;
+        font-size: 0.3em;
+        font-weight: 900;
+        color: var(--ink);
+        margin-left: 6px;
+      }
+      .ev h3 {
+        margin-top: 12px;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.5;
+      }
+      .ev p {
+        margin-top: 6px;
+        font-size: 17px;
+        line-height: 1.75;
+        color: var(--ink-soft);
+      }
+      .trio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .trio .n {
+        font-size: clamp(44px, 4.8vw, 68px);
+      }
+      .trio .n i {
+        font-size: 0.42em;
+        margin-left: 4px;
+      }
+      .trio h3 {
+        font-size: 18px;
+        margin-top: 8px;
+      }
+
+      /* ---------- plan ---------- */
+      .plan {
+        background: var(--white);
+        border-top: 1px solid var(--line);
+      }
+      .two {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .svc {
+        border: 2px solid var(--flame);
+        border-radius: 18px;
+        padding: 28px 30px 30px;
+      }
+      .svc .for {
+        font-size: 17px;
+        font-weight: 900;
+        color: var(--flame);
+      }
+      .svc h3 {
+        margin-top: 4px;
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1.4;
+      }
+      .svc > p {
+        margin-top: 10px;
+        font-size: 17px;
+        color: var(--ink-soft);
+      }
+      .svc ul {
+        margin-top: 16px;
+        display: grid;
+        gap: 8px;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      .svc li {
+        padding-left: 1.3em;
+        position: relative;
+      }
+      .svc li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--core);
+      }
+      .steps {
+        margin-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .step {
+        background: var(--paper);
+        border-radius: 16px;
+        padding: 24px 26px 26px;
+        border-top: 6px solid var(--flame);
+      }
+      .step .d {
+        font-family: var(--num);
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--flame);
+      }
+      .step .d i {
+        font-family: var(--jp);
+        font-style: normal;
+        font-size: 0.42em;
+        font-weight: 900;
+        color: var(--ink);
+        margin-left: 4px;
+      }
+      .step h3 {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.5;
+      }
+      .step ol {
+        margin-top: 12px;
+        display: grid;
+        gap: 6px;
+        font-size: 17px;
+        line-height: 1.6;
+      }
+      .step ol li {
+        padding-left: 1em;
+        text-indent: -1em;
+      }
+      .step ol li::before {
+        content: "・";
+        color: var(--flame);
+        font-weight: 900;
+      }
+
+      /* ---------- next ---------- */
+      .next {
+        background: var(--ink);
+        color: var(--white);
+      }
+      .next .kicker {
+        color: var(--core);
+      }
+      .next .sec-head p {
+        color: #d5def0;
+      }
+      .agenda {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        counter-reset: ag;
+      }
+      .agenda li {
+        counter-increment: ag;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 16px;
+        padding: 24px 26px 26px;
+      }
+      .agenda li::before {
+        content: counter(ag);
+        font-family: var(--num);
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--core);
+      }
+      .agenda h3 {
+        margin-top: 8px;
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 1.45;
+      }
+      .agenda p {
+        margin-top: 8px;
+        font-size: 17px;
+        color: #d5def0;
+      }
+      .meet {
+        margin-top: 36px;
+        font-size: 19px;
+        font-weight: 700;
+      }
+      .meet b {
+        font-family: var(--num);
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        margin-right: 10px;
+      }
+
+      footer {
+        background: var(--ink);
+        color: #d5def0;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 40px 0 56px;
+        font-size: 17px;
+        line-height: 1.85;
+      }
+      footer .sig {
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.7;
+      }
+      footer ul {
+        margin-top: 20px;
+        display: grid;
+        gap: 4px;
+      }
+      footer li {
+        padding-left: 1.2em;
+        text-indent: -1.2em;
+      }
+      footer li::before {
+        content: "※ ";
+      }
+      footer a {
+        text-underline-offset: 3px;
+      }
+
+      /* ---------- responsive ---------- */
+      @media (max-width: 1180px) {
+        .eq {
+          flex-wrap: wrap;
+          gap: 10px 12px;
+        }
+        .term {
+          flex: 1 1 160px;
+          min-width: 160px;
+        }
+      }
+      @media (max-width: 980px) {
+        .sim-grid {
+          grid-template-columns: 1fr;
+        }
+        .out {
+          position: static;
+        }
+        .cards,
+        .human-grid,
+        .two {
+          grid-template-columns: 1fr;
+        }
+        .ev-grid {
+          grid-template-columns: 1fr;
+        }
+        .ev.wide {
+          grid-column: auto;
+        }
+        .steps,
+        .agenda {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 720px) {
+        body {
+          font-size: 17px;
+        }
+        .wrap {
+          width: calc(100% - 32px);
+        }
+        .bar nav a {
+          padding: 6px 6px;
+          font-size: 16px;
+        }
+        .bar-id {
+          display: none;
+        }
+        .bar .wrap {
+          justify-content: center;
+        }
+        .hero {
+          padding: 44px 0 60px;
+        }
+        .lead {
+          font-size: 18px;
+        }
+        .eq {
+          flex-direction: column;
+          gap: 4px;
+        }
+        .eq-lhs {
+          font-size: 28px;
+        }
+        .op {
+          justify-content: center;
+          font-size: 24px;
+          height: 30px;
+        }
+        .term {
+          flex: 0 0 auto;
+          min-width: 0;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: baseline;
+          gap: 2px 12px;
+          padding: 12px 16px;
+        }
+        .term b {
+          font-size: 24px;
+        }
+        .term .cnt {
+          margin: 0 0 0 auto;
+        }
+        .sec {
+          padding: 64px 0;
+        }
+        .panel {
+          padding: 22px 18px;
+        }
+        .out-main {
+          padding: 22px 20px 24px;
+        }
+        .out-three {
+          grid-template-columns: 1fr;
+        }
+        .mini .cap {
+          min-height: 0;
+        }
+        .bar-row {
+          grid-template-columns: 5.6em 1fr 5.4em;
+          gap: 8px;
+        }
+        .card {
+          padding: 22px 20px 24px;
+        }
+        .card dl {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+        .card dd {
+          margin-bottom: 8px;
+        }
+        .trio {
+          grid-template-columns: 1fr;
+        }
+        .svc {
+          padding: 22px 20px 24px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .term::before,
+        .term::after,
+        .term b,
+        .term small,
+        .term .cnt {
+          animation-duration: 0.01s;
+          animation-delay: 0s !important;
+        }
+        .bar-row .fill {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bar">
+      <div class="wrap">
+        <div class="bar-id">COMIX <b>→</b> IGNITION GUILD　2026.11.26</div>
+        <nav aria-label="ページ内">
+          <a href="#sim">試算</a>
+          <a href="#measures">19の施策</a>
+          <a href="#plan">進め方</a>
+          <a href="#next">明日決めること</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">
+            <b class="nb">株式会社イグニッション・ギルド</b>
+            <b class="nb">代表取締役CEO 合原 英亮 様</b>
+            <span>生成AI活用のご提案｜株式会社コミクス</span>
+          </p>
+          <h1>
+            <span class="nb">還元率80%は、</span
+            ><span class="nb">動かさない。</span><br /><em
+              ><span class="nb">動かすのは、</span
+              ><span class="nb">残りの4つ。</span></em
+            >
+          </h1>
+          <p class="lead">
+            貴社は「私たちの約束」のページで、高い還元率は<q>AIの活用による業務の効率化</q>によって実現していると書かれています。その原資を、生成AIでさらに厚くするご提案です。営業・採用・管理の仕事を19の施策に分け、利益の式のどの項を動かすかで並べました。
+          </p>
+
+          <p class="eq-label">貴社の利益の式(簡略)</p>
+          <div
+            class="eq"
+            aria-label="利益 = 稼働人数 × 単価 × 稼働率 × (1 − 還元率) − 本部の手間"
+          >
+            <div class="eq-lhs">利益<i>=</i></div>
+            <button class="term" type="button" data-go="headcount">
+              <b>稼働人数</b><small>採用と定着</small
+              ><span class="cnt" data-count="headcount"></span>
+            </button>
+            <div class="op" aria-hidden="true">×</div>
+            <button class="term" type="button" data-go="price">
+              <b>単価</b><small>提案とスキル</small
+              ><span class="cnt" data-count="price"></span>
+            </button>
+            <div class="op" aria-hidden="true">×</div>
+            <button class="term" type="button" data-go="util">
+              <b>稼働率</b><small>待機を短くする</small
+              ><span class="cnt" data-count="util"></span>
+            </button>
+            <div class="op" aria-hidden="true">× (1 −</div>
+            <div class="term keep">
+              <b>還元率</b><small>守る約束</small
+              ><span class="cnt">80%以上</span>
+            </div>
+            <div class="op" aria-hidden="true">) −</div>
+            <button class="term" type="button" data-go="office">
+              <b>本部の手間</b><small>定型業務を削減</small
+              ><span class="cnt" data-count="office"></span>
+            </button>
+          </div>
+          <p class="eq-note">青い項を押すと、その項を動かす施策に移ります。</p>
+        </div>
+      </section>
+
+      <section class="sec sim" id="sim">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">SIMULATION</p>
+            <h2>貴社の数字を入れると、動く金額が出ます。</h2>
+            <p>
+              初期値はすべて仮置きです。単価70万円と還元率80%は貴社サイトの掲載例から、人数は仮に置きました。明日のZoomで実数に置き換えます。
+            </p>
+          </div>
+
+          <div class="sim-grid">
+            <div class="panel">
+              <h3>いまの姿 <span>仮置き・書き換えられます</span></h3>
+              <div class="base">
+                <label class="field"
+                  ><span>稼働エンジニア数</span
+                  ><span class="in"
+                    ><input
+                      type="number"
+                      id="iN"
+                      value="30"
+                      min="1"
+                      max="3000"
+                      step="1"
+                      inputmode="numeric"
+                    /><em>名</em></span
+                  ></label
+                >
+                <label class="field"
+                  ><span>平均単価(月額)</span
+                  ><span class="in"
+                    ><input
+                      type="number"
+                      id="iP"
+                      value="70"
+                      min="20"
+                      max="300"
+                      step="1"
+                      inputmode="numeric"
+                    /><em>万円</em></span
+                  ></label
+                >
+                <label class="field"
+                  ><span>還元率</span
+                  ><span class="in"
+                    ><input
+                      type="number"
+                      id="iR"
+                      value="80"
+                      min="50"
+                      max="95"
+                      step="1"
+                      inputmode="numeric"
+                    /><em>%</em></span
+                  ></label
+                >
+                <label class="field"
+                  ><span>本部メンバー(営業・採用・管理)</span
+                  ><span class="in"
+                    ><input
+                      type="number"
+                      id="iS"
+                      value="6"
+                      min="1"
+                      max="300"
+                      step="1"
+                      inputmode="numeric"
+                    /><em>名</em></span
+                  ></label
+                >
+              </div>
+
+              <div class="levers">
+                <h3>AIで動かす幅 <span>つまみを動かしてください</span></h3>
+                <div class="lever">
+                  <div class="lever-top">
+                    <label for="lH"
+                      >採用で増える稼働人数<small
+                        >稼働人数｜年間・通年稼働として換算</small
+                      ></label
+                    ><output id="oH"></output>
+                  </div>
+                  <input
+                    type="range"
+                    id="lH"
+                    min="0"
+                    max="30"
+                    step="1"
+                    value="5"
+                  />
+                </div>
+                <div class="lever">
+                  <div class="lever-top">
+                    <label for="lK"
+                      >離職を防げる人数<small
+                        >稼働人数｜年間・通年稼働として換算</small
+                      ></label
+                    ><output id="oK"></output>
+                  </div>
+                  <input
+                    type="range"
+                    id="lK"
+                    min="0"
+                    max="10"
+                    step="1"
+                    value="2"
+                  />
+                </div>
+                <div class="lever">
+                  <div class="lever-top">
+                    <label for="lP"
+                      >平均単価の上昇<small
+                        >単価｜いまの稼働人数に対して</small
+                      ></label
+                    ><output id="oP"></output>
+                  </div>
+                  <input
+                    type="range"
+                    id="lP"
+                    min="0"
+                    max="15"
+                    step="0.5"
+                    value="5"
+                  />
+                </div>
+                <div class="lever">
+                  <div class="lever-top">
+                    <label for="lU"
+                      >稼働率の改善<small
+                        >稼働率｜待機日数の短縮分</small
+                      ></label
+                    ><output id="oU"></output>
+                  </div>
+                  <input
+                    type="range"
+                    id="lU"
+                    min="0"
+                    max="8"
+                    step="0.5"
+                    value="2"
+                  />
+                </div>
+                <div class="lever">
+                  <div class="lever-top">
+                    <label for="lT"
+                      >本部の定型業務の削減率<small
+                        >本部の手間｜当社支援企業の実績は40〜60%</small
+                      ></label
+                    ><output id="oT"></output>
+                  </div>
+                  <input
+                    type="range"
+                    id="lT"
+                    min="0"
+                    max="60"
+                    step="5"
+                    value="50"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="out" aria-live="polite">
+              <div class="out-main">
+                <p class="cap">年間売上の上積み(試算)</p>
+                <p class="big">
+                  <span class="plus">+</span><span id="rRev"></span>
+                </p>
+                <p class="sub">
+                  いまの年間売上 <b id="rBase"></b> に対して <b id="rPct"></b>
+                </p>
+                <div class="bars">
+                  <div class="bar-row">
+                    <span>採用</span
+                    ><span class="track"
+                      ><span class="fill" id="bH"></span></span
+                    ><span class="v" id="vH"></span>
+                  </div>
+                  <div class="bar-row">
+                    <span>定着</span
+                    ><span class="track"
+                      ><span class="fill" id="bK"></span></span
+                    ><span class="v" id="vK"></span>
+                  </div>
+                  <div class="bar-row">
+                    <span>単価</span
+                    ><span class="track"
+                      ><span class="fill" id="bP"></span></span
+                    ><span class="v" id="vP"></span>
+                  </div>
+                  <div class="bar-row">
+                    <span>稼働率</span
+                    ><span class="track"
+                      ><span class="fill" id="bU"></span></span
+                    ><span class="v" id="vU"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="out-three">
+                <div class="mini">
+                  <p class="cap">粗利の上積み</p>
+                  <p class="val" id="rGross"></p>
+                  <p class="hint">上積み ×(1 − 還元率)</p>
+                </div>
+                <div class="mini">
+                  <p class="cap">エンジニアへの還元</p>
+                  <p class="val" id="rBack"></p>
+                  <p class="hint">上積み × 還元率</p>
+                </div>
+                <div class="mini">
+                  <p class="cap">本部に生まれる時間</p>
+                  <p class="val" id="rHours"></p>
+                  <p class="hint" id="rHoursYen"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="sim-notes">
+            <li>
+              計算式: 売上の上積み =(採用+定着の人数 × 単価 × 12か月)+(稼働人数
+              × 単価 × 12か月 ×(単価上昇率+稼働率の改善幅))。
+            </li>
+            <li>
+              本部の時間 = 本部メンバー × 定型業務1日4時間 × 削減率 ×
+              年240日。金額換算は時間単価5,000円(当社資料の試算前提と同じ置き方)。
+            </li>
+            <li>
+              貴社は待機中の給与を全額保証されているため、稼働率の改善は実際にはこの粗利試算より大きく効く可能性があります。ここでは控えめに計算しています。
+            </li>
+            <li>
+              仮定にもとづく試算であり、成果を保証するものではありません。
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sec" id="measures">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">19 MEASURES</p>
+            <h2>19の施策。貴社の仕事の名前で書きました。</h2>
+            <p>
+              AIが下書きと集計を受け持ち、確認と判断は人が行う前提です。それぞれに、効く数字と着手の目安を付けています。
+            </p>
+          </div>
+          <div
+            class="filters"
+            role="group"
+            aria-label="動かす項で絞り込む"
+            id="filters"
+          ></div>
+          <div class="cards" id="cards"></div>
+          <p class="cards-note">
+            ※
+            着手の目安と想定メニューは初期案です。優先順と範囲は、貴社の体制を伺ったうえで開始前に確定します。
+          </p>
+        </div>
+      </section>
+
+      <section class="sec human">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">HUMAN ONLY</p>
+            <h2>AIに渡さない仕事を、先に決めておきます。</h2>
+            <p>
+              単価連動と案件選択制は、人と人の信頼で成り立つ仕組みです。次の4つは人が担い続け、AIは材料づくりまでにとどめます。
+            </p>
+          </div>
+          <div class="human-grid">
+            <div class="human-item">
+              <h3>単価・契約条件の交渉</h3>
+              <p>
+                その場の判断と関係性が単価を左右します。<b>AIが用意するもの:</b>
+                相場、過去の条件、本人の実績の比較表。
+              </p>
+            </div>
+            <div class="human-item">
+              <h3>キャリア面談と案件選択の伴走</h3>
+              <p>
+                将来像を聞き、迷いに寄り添う対話は人が行います。<b
+                  >AIが用意するもの:</b
+                >
+                面談前の要約と質問案、候補案件の一覧。
+              </p>
+            </div>
+            <div class="human-item">
+              <h3>還元率・給与制度の決定</h3>
+              <p>
+                社員への約束に関わる経営判断です。<b>AIが用意するもの:</b>
+                条件を変えたときの試算と比較。
+              </p>
+            </div>
+            <div class="human-item">
+              <h3>採用の最終面談・内定判断</h3>
+              <p>
+                人柄と価値観の見極め、入社の動機づけは人が行います。<b
+                  >AIが用意するもの:</b
+                >
+                面談記録と論点の整理。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="evidence">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">EVIDENCE</p>
+            <h2>この進め方は、コミクス自身と支援先で使ってきた型です。</h2>
+          </div>
+          <div class="ev-grid">
+            <div class="ev">
+              <p class="n">304<i>社</i></p>
+              <h3>生成AI活用の支援実績</h3>
+              <p>2026年10月31日現在の、生成AI活用を支援した企業の数です。</p>
+            </div>
+            <div class="ev wide">
+              <div class="trio">
+                <div>
+                  <p class="n">40–60<i>%</i></p>
+                  <h3>業務時間の削減</h3>
+                </div>
+                <div>
+                  <p class="n">75<i>%</i></p>
+                  <h3>資料作成の短縮</h3>
+                </div>
+                <div>
+                  <p class="n">80<i>%</i></p>
+                  <h3>メール対応の削減</h3>
+                </div>
+              </div>
+              <p style="margin-top: 14px">
+                当社支援企業の実績値です。貴社での効果は、対象業務と現在の工数を伺ったうえで試算します。
+              </p>
+            </div>
+            <div class="ev wide">
+              <p class="n">15.4<i>人分</i></p>
+              <h3>代表・鈴木本人の1週間の実測</h3>
+              <p>
+                2026年7月29日〜8月5日。成果物689件、人手の作業時間に換算して759.8時間分を、実投入49.5時間で出しました。自社基準の人手換算であり、生産性の伸び率ではありません。講師本人の事例で、導入後の成果を保証するものではありません。
+              </p>
+            </div>
+            <div class="ev">
+              <p class="n">2<i>名で伴走</i></p>
+              <h3>CEO鈴木とCIO橋本が直接担当</h3>
+              <p>
+                自分たちが毎日使っている仕組みを、そのままお見せしながら進めます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec plan" id="plan">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">HOW WE WORK</p>
+            <h2>経営者ご本人とチームに、別々の入口を用意します。</h2>
+            <p>
+              合原様ご自身がAIで判断と発信を速くする道と、営業・採用・管理のチームに仕組みを入れる道。2つを並行して進めます。
+            </p>
+          </div>
+          <div class="two">
+            <div class="svc">
+              <p class="for">合原様ご本人に</p>
+              <h3>生成AI活用顧問</h3>
+              <p>
+                経営者限定のマンツーマン。合原様の実務に合わせて、道具選びから実践、効果の確認まで伴走します。
+              </p>
+              <ul>
+                <li>月2回・各30分のZoom個別相談</li>
+                <li>CEO鈴木は月1回、CIO橋本は月2回参加</li>
+                <li>Messenger・ChatWork・Slackで随時チャット相談</li>
+                <li>年間契約</li>
+                <li>
+                  主に扱う施策:
+                  交渉材料の準備、AIで開発できる人づくり、会議の記録、月曜朝の経営数字
+                </li>
+              </ul>
+            </div>
+            <div class="svc">
+              <p class="for">営業・採用・管理のチームに</p>
+              <h3>生成AI活用支援パック</h3>
+              <p>
+                対象業務を選び、その場で試し、一緒に実装して、運用を直していきます。6か月の支援です。
+              </p>
+              <ul>
+                <li>ご参加は4名まで、コミクスの稼働は月10時間まで</li>
+                <li>
+                  ベーシック(共同実施型): 業務棚卸し・活用レクチャー・自動化支援
+                </li>
+                <li>
+                  スタンダード(BPO型): 上記に加え、システム連携・カスタム開発
+                </li>
+                <li>
+                  主に扱う施策:
+                  年収診断の追客、スキルシートと想定問答、提案メール、案件データベースとマッチング、請求と明細
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="steps" id="steps"></div>
+        </div>
+      </section>
+
+      <section class="sec next" id="next">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">TOMORROW</p>
+            <h2>明日の45分で、3つだけ決めさせてください。</h2>
+            <p>
+              このページは、貴社の公開情報から組んだ初期案です。実数とご事情を伺えば、試算も順番も貴社のものになります。
+            </p>
+          </div>
+          <ol class="agenda">
+            <li>
+              <h3>試算に入れる実数</h3>
+              <p>
+                稼働人数、平均単価、案件の切れ目に生じる待機の実態、本部の人数。その場で上の試算に入れ直します。
+              </p>
+            </li>
+            <li>
+              <h3>最初に着手する3施策</h3>
+              <p>
+                30日以内に着手する6件の候補から、いちばん困っているものを3つ選びます。
+              </p>
+            </li>
+            <li>
+              <h3>参加いただく方</h3>
+              <p>
+                合原様ご本人と、営業・採用・管理から最大4名。誰のどの仕事から始めるかを決めます。
+              </p>
+            </li>
+          </ol>
+          <p class="meet">
+            <b>2026.11.26 THU 17:00–17:45</b>Zoom オンラインミーティング
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p class="sig">鈴木章裕<br />株式会社コミクス 代表取締役</p>
+        <ul>
+          <li>
+            本ページは、貴社の公開情報(<a
+              href="https://ignition-guild.com/"
+              rel="noopener"
+              >ignition-guild.com</a
+            >、2026年11月25日閲覧)と、SES事業の一般的な業務の流れをもとに作成した初期案です。実際の業務とは異なる場合があります。
+          </li>
+          <li>
+            還元率80%以上・定着率95%・パートナー企業2,000社以上・案件情報20,000件以上・診断結果の送付日数・ブログ一覧の更新日は、貴社サイトの記載によります。
+          </li>
+          <li>
+            試算・目安・想定メニューは仮定にもとづくもので、売上・採用・単価などの成果を保証するものではありません。
+          </li>
+          <li>料金と契約条件は、明日のミーティングでご案内します。</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var TERMS = {
+          headcount: "稼働人数",
+          price: "単価",
+          util: "稼働率",
+          office: "本部の手間",
+        };
+
+        var MEASURES = [
+          {
+            t: "headcount",
+            w: 30,
+            m: "支援パック(ベーシック)",
+            title: "AI適正年収診断を当日中に返し、面談予約まで追いかける",
+            d: "スキルシートを受け取ったら、Claudeが適正年収の幅・強みの言語化・キャリアパス案を下書きし、担当者が確認して送ります。結果メールに面談予約のリンクを添え、未予約の方には3日後と10日後に自動で案内します。",
+            h: "診断内容の確認と送付の判断",
+            k: "診断から面談予約への移行率、返却までの日数(現在のご案内は通常3営業日以内)",
+          },
+          {
+            t: "headcount",
+            w: 30,
+            m: "支援パック(ベーシック)",
+            title: "カジュアル面談の記録・お礼・次の一手を、その日のうちに出す",
+            d: "面談の文字起こしをClaudeが要約して候補者台帳に登録し、お礼の文面と次回の提案を下書きします。応募書類は募集要件との照合表まで用意します。",
+            h: "合否と、候補者への連絡内容",
+            k: "面談から選考への移行率、記録と連絡にかかる時間",
+          },
+          {
+            t: "headcount",
+            w: 90,
+            m: "支援パック(ベーシック)",
+            title: "12職種の求人票と採用ブログを、毎週出せる体制にする",
+            d: "検索される言葉の調査、記事と求人票の下書きまでをClaudeが行います。案件例やモデル年収など、すでにお持ちの材料を使います。貴社ブログ一覧の最新記事は2025年10月30日付でした(2026年11月25日に確認)。",
+            h: "案件例・数字の事実確認と、公開の判断",
+            k: "記事の公開本数、求人ページからの面談予約数",
+          },
+          {
+            t: "headcount",
+            w: 90,
+            m: "支援パック(ベーシック)",
+            title: "スカウト文面を、相手の経歴に合わせて1通ずつ書く",
+            d: "候補者の経歴を読み、単価連動・案件選択制・プライム案件のどれが響くかを書き分けた下書きを作ります。同じ文面の一斉送信をやめます。",
+            h: "送る相手の選定と、送信",
+            k: "スカウトの返信率、面談設定数",
+          },
+          {
+            t: "headcount",
+            w: 90,
+            m: "支援パック(ベーシック)",
+            title: "AI検索で「高還元のSES」を尋ねた人に、社名が出る状態を作る",
+            d: "ChatGPTなどのAI検索で貴社の情報がどう扱われているかを診断し、採用ページの直す箇所を優先順位つきの指示書にまとめ、直したあとに再診断します。",
+            h: "掲載する情報の確認と、サイト更新の判断",
+            k: "AI検索での言及状況、指名での流入。掲載や引用の実現を保証するものではありません",
+          },
+          {
+            t: "headcount",
+            w: 90,
+            m: "支援パック(ベーシック)",
+            title: "参画中エンジニアの「変化の兆し」を、月次でつかむ",
+            d: "毎月の短いアンケートをClaudeが要約し、負荷や希望の変化を担当者へ知らせます。面談で聞く質問案も用意します。",
+            h: "本人との対話と、案件変更の判断",
+            k: "定着率95%の維持、面談準備の時間",
+          },
+
+          {
+            t: "price",
+            w: 30,
+            m: "支援パック(ベーシック)",
+            title: "スキルシートを、実績が数字と役割で伝わる書き方に磨く",
+            d: "経歴メモから、担当範囲・規模・成果が伝わる文章にClaudeが書き直します。提案先の要件に合わせて、強調する経験を変えた版も作ります。",
+            h: "内容の事実確認(ご本人)と、提出の判断",
+            k: "書類から客先面談への通過率、成約時の単価",
+          },
+          {
+            t: "price",
+            w: 30,
+            m: "支援パック(ベーシック)",
+            title: "客先面談の想定問答を作り、AIを相手に練習する",
+            d: "案件概要とスキルシートから、聞かれそうな質問と回答の下書きを作ります。Claudeを面接官役にして、本番前に何度でも練習できます。",
+            h: "回答内容の最終確認と、当日の受け答え",
+            k: "客先面談の通過率、参画決定までの日数",
+          },
+          {
+            t: "price",
+            w: 90,
+            m: "生成AI活用顧問",
+            title: "単価交渉の材料を、交渉の前に1枚で揃える",
+            d: "過去の契約条件、同じ技術領域の単価、本人の実績と客先からの評価を1枚にまとめます。契約更新の前に、根拠を持って席に着けます。",
+            h: "交渉そのものと、条件の決定",
+            k: "契約更新時の単価改定額。単価連動のため、そのまま給与に反映されます",
+          },
+          {
+            t: "price",
+            w: 180,
+            m: "生成AI活用顧問+支援パック",
+            title:
+              "エンジニアを「AIで開発できる人」にし、スキルシートに書ける経験にする",
+            d: "Claude CodeやCodexを使った開発の進め方を、イグニッション・アカデミーの教材と演習にします。まず合原様ご自身が使いこなし、社内へ広げる順で進めます。",
+            h: "教材内容の確認(講師)と、育成方針の決定",
+            k: "受講者数、提案時の平均単価",
+          },
+
+          {
+            t: "util",
+            w: 30,
+            m: "支援パック(ベーシック)",
+            title: "提案メールを、案件を見たその日に送り切る",
+            d: "案件ごとに、候補者の強みと要件の合う点を書いた提案メールをClaudeが下書きします。",
+            h: "宛先と単価の確認、送信",
+            k: "案件受領から提案までの時間、1日の提案件数",
+          },
+          {
+            t: "util",
+            w: 90,
+            m: "支援パック(ベーシック)",
+            title: "契約満了の60日前と30日前に、継続意思の確認とアラートを出す",
+            d: "契約台帳をもとに、ご本人への確認フォームと営業担当への通知を自動で送ります。次の案件探しを前倒しで始められます。",
+            h: "本人との面談と、次の案件の提案",
+            k: "案件の切れ目に生じる待機日数",
+          },
+          {
+            t: "util",
+            w: 180,
+            m: "支援パック(スタンダード)",
+            title: "届いた案件メールを自動で読み、案件データベースに登録する",
+            d: "受信した案件メールから、業界・技術・工程・リモート可否・単価をClaudeが読み取って登録します。常時20,000件以上の案件情報を、条件で引ける形に保ちます。",
+            h: "登録ルールの決定と、例外の確認",
+            k: "登録にかかる手間、案件検索の時間",
+          },
+          {
+            t: "util",
+            w: 180,
+            m: "支援パック(スタンダード)",
+            title: "スキルシートと希望条件から、候補案件と推薦理由を出す",
+            d: "案件データベースと照合し、合う案件の候補と、なぜ合うのかの理由を並べます。案件選択制で、選ぶ材料を早く多く出せます。",
+            h: "候補の絞り込みと、ご本人への説明",
+            k: "提案までの日数、待機日数、案件変更時の満足度",
+          },
+
+          {
+            t: "office",
+            w: 30,
+            m: "生成AI活用顧問",
+            title: "会議の記録から、決定事項・担当・期限までを当日中に出す",
+            d: "録画や文字起こしから、決まったことと宿題をClaudeが整理し、フォローの文面まで下書きします。",
+            h: "内容の確認と、送付",
+            k: "議事録とフォローにかかる時間",
+          },
+          {
+            t: "office",
+            w: 90,
+            m: "支援パック(ベーシック)",
+            title: "問い合わせの仕分けと一次返信を、受信と同時に行う",
+            d: "フォームの内容から種別(事業・協業・取材など)を判定して担当者へ通知し、定型の質問には返信案を付けます。3営業日の期限が近いものは知らせます。",
+            h: "返信内容の確認と、個別対応",
+            k: "初回返信までの時間、対応漏れの件数",
+          },
+          {
+            t: "office",
+            w: 180,
+            m: "支援パック(スタンダード)",
+            title: "勤怠の回収から請求書の発行までを、つなげて流す",
+            d: "未提出の方へ自動で案内し、作業報告書を読み取って精算幅を計算し、請求書サービスへ連携します。",
+            h: "例外処理と、発行前の最終確認",
+            k: "月初の締め作業にかかる時間、請求の差し戻し件数",
+          },
+          {
+            t: "office",
+            w: 180,
+            m: "支援パック(スタンダード)",
+            title: "還元率の明細を、ご本人向けに毎月自動で作る",
+            d: "契約単価・勤怠・社会保険のデータから還元率を計算し、明細に反映します。貴社が掲げる還元率の透明性を、毎月の明細で示せます。",
+            h: "計算ルールの決定と、制度変更時の見直し",
+            k: "給与計算と問い合わせ対応にかかる時間",
+          },
+          {
+            t: "office",
+            w: 180,
+            m: "生成AI活用顧問",
+            title: "月曜の朝に、稼働・待機・満了予定・採用の数字を1画面で見る",
+            d: "稼働人数、待機中の人数、60日以内の契約満了、採用の進み具合、粗利を1画面に集め、先週から変わった点を先頭に出します。",
+            h: "どの数字で何を決めるかの設計と、意思決定",
+            k: "数字の集計にかかる時間、判断までの日数",
+          },
+        ];
+
+        var WHEN = {
+          30: "30日以内に着手",
+          90: "90日以内に着手",
+          180: "180日以内に着手",
+        };
+
+        function el(tag, cls, text) {
+          var n = document.createElement(tag);
+          if (cls) n.className = cls;
+          if (text != null) n.textContent = text;
+          return n;
+        }
+
+        /* counts in the equation */
+        var counts = {};
+        MEASURES.forEach(function (m) {
+          counts[m.t] = (counts[m.t] || 0) + 1;
+        });
+        document.querySelectorAll("[data-count]").forEach(function (n) {
+          n.textContent = counts[n.dataset.count] + "施策";
+        });
+
+        /* cards */
+        var cards = document.getElementById("cards");
+        MEASURES.forEach(function (m) {
+          var c = el("article", "card");
+          c.dataset.term = m.t;
+          var top = el("div", "card-top");
+          top.appendChild(el("span", "tag", TERMS[m.t]));
+          top.appendChild(el("span", "when", WHEN[m.w]));
+          c.appendChild(top);
+          c.appendChild(el("h3", null, m.title));
+          c.appendChild(el("p", "do", m.d));
+          var dl = el("dl");
+          [
+            ["人が決める", m.h],
+            ["効く数字", m.k],
+            ["想定メニュー", m.m],
+          ].forEach(function (r) {
+            dl.appendChild(el("dt", null, r[0]));
+            dl.appendChild(el("dd", null, r[1]));
+          });
+          c.appendChild(dl);
+          cards.appendChild(c);
+        });
+
+        /* filters */
+        var filters = document.getElementById("filters");
+        var buttons = {};
+        function addFilter(key, label, n) {
+          var b = el("button");
+          b.type = "button";
+          b.appendChild(document.createTextNode(label));
+          b.appendChild(el("span", null, String(n)));
+          b.setAttribute("aria-pressed", "false");
+          b.addEventListener("click", function () {
+            setFilter(key);
+          });
+          filters.appendChild(b);
+          buttons[key] = b;
+        }
+        addFilter("all", "すべて", MEASURES.length);
+        Object.keys(TERMS).forEach(function (k) {
+          addFilter(k, TERMS[k], counts[k]);
+        });
+
+        function setFilter(key) {
+          Object.keys(buttons).forEach(function (k) {
+            buttons[k].setAttribute(
+              "aria-pressed",
+              k === key ? "true" : "false",
+            );
+          });
+          cards.querySelectorAll(".card").forEach(function (c) {
+            c.hidden = !(key === "all" || c.dataset.term === key);
+          });
+        }
+        setFilter("all");
+
+        document.querySelectorAll("[data-go]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            setFilter(b.dataset.go);
+            document.getElementById("measures").scrollIntoView();
+          });
+        });
+
+        /* roadmap, built from the same list */
+        var steps = document.getElementById("steps");
+        [
+          [30, "下書きと記録から始める"],
+          [90, "採用と更新の流れに広げる"],
+          [180, "データをつなぎ、仕組みにする"],
+        ].forEach(function (s) {
+          var box = el("div", "step");
+          var d = el("p", "d", String(s[0]));
+          d.appendChild(el("i", null, "日以内"));
+          box.appendChild(d);
+          box.appendChild(el("h3", null, s[1]));
+          var ol = el("ol");
+          MEASURES.filter(function (m) {
+            return m.w === s[0];
+          }).forEach(function (m) {
+            ol.appendChild(el("li", null, m.title));
+          });
+          box.appendChild(ol);
+          steps.appendChild(box);
+        });
+
+        /* simulator */
+        var $ = function (id) {
+          return document.getElementById(id);
+        };
+        function num(id, lo, hi) {
+          var v = parseFloat($(id).value);
+          if (isNaN(v)) v = lo;
+          return Math.min(hi, Math.max(lo, v));
+        }
+        function comma(n) {
+          return Math.round(n).toLocaleString("ja-JP");
+        }
+        function man(n) {
+          n = Math.round(n);
+          if (n >= 10000) {
+            var oku = Math.floor(n / 10000),
+              rest = n % 10000;
+            return oku + "億" + (rest ? comma(rest) + "万円" : "円");
+          }
+          return comma(n) + "万円";
+        }
+        function setBig(node, n) {
+          node.textContent = "";
+          n = Math.round(n);
+          var oku = Math.floor(n / 10000),
+            rest = n % 10000;
+          if (oku > 0) {
+            node.appendChild(document.createTextNode(String(oku)));
+            node.appendChild(el("span", "unit", "億"));
+            if (rest) {
+              node.appendChild(document.createTextNode(comma(rest)));
+              node.appendChild(el("span", "unit", "万円"));
+            } else {
+              node.appendChild(el("span", "unit", "円"));
+            }
+          } else {
+            node.appendChild(document.createTextNode(comma(n)));
+            node.appendChild(el("span", "unit", "万円"));
+          }
+        }
+        function setVal(node, text, unit) {
+          node.textContent = text;
+          node.appendChild(el("i", null, unit));
+        }
+
+        function calc() {
+          var N = num("iN", 1, 3000),
+            P = num("iP", 20, 300),
+            R = num("iR", 50, 95) / 100,
+            S = num("iS", 1, 300);
+          var dH = +$("lH").value,
+            dK = +$("lK").value,
+            dP = +$("lP").value / 100,
+            dU = +$("lU").value / 100,
+            dT = +$("lT").value / 100;
+
+          $("oH").textContent = "+" + dH + "名";
+          $("oK").textContent = "+" + dK + "名";
+          $("oP").textContent = "+" + (+$("lP").value).toFixed(1) + "%";
+          $("oU").textContent = "+" + (+$("lU").value).toFixed(1) + "pt";
+          $("oT").textContent = Math.round(dT * 100) + "%";
+
+          var base = N * P * 12;
+          var rH = dH * P * 12,
+            rK = dK * P * 12,
+            rP = base * dP,
+            rU = base * dU;
+          var rev = rH + rK + rP + rU;
+          var hours = S * 4 * dT * 240;
+
+          setBig($("rRev"), rev);
+          $("rBase").textContent = man(base);
+          $("rPct").textContent = "+" + ((rev / base) * 100).toFixed(1) + "%";
+
+          var max = Math.max(rH, rK, rP, rU, 1);
+          [
+            ["H", rH],
+            ["K", rK],
+            ["P", rP],
+            ["U", rU],
+          ].forEach(function (x) {
+            $("b" + x[0]).style.width = (x[1] / max) * 100 + "%";
+            $("v" + x[0]).textContent = "+" + man(x[1]);
+          });
+
+          var g = rev * (1 - R),
+            b = rev * R;
+          if (g >= 10000) {
+            $("rGross").textContent = "+" + man(g);
+          } else {
+            setVal($("rGross"), "+" + comma(g), "万円");
+          }
+          if (b >= 10000) {
+            $("rBack").textContent = "+" + man(b);
+          } else {
+            setVal($("rBack"), "+" + comma(b), "万円");
+          }
+          setVal($("rHours"), comma(hours), "時間/年");
+          $("rHoursYen").textContent =
+            "時間単価5,000円で " + man(hours * 0.5) + "相当";
+        }
+        ["iN", "iP", "iR", "iS", "lH", "lK", "lP", "lU", "lT"].forEach(
+          function (id) {
+            $(id).addEventListener("input", calc);
+          },
+        );
+        calc();
+      })();
+    </script>
+  </body>
+</html>
